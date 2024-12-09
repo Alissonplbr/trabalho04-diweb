@@ -1,0 +1,297 @@
+/* Reseta o estilo básico do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Cor de fundo e estilo geral da página */
+body {
+    background: linear-gradient(to right, #000000, #f44336); /* Gradiente com preto e vermelho */
+    color: #ffbb00; /* Texto amarelo */
+    font-size: 16px;
+    line-height: 1.8; /* Aumentei o espaçamento entre as linhas */
+    font-family: 'Lora', serif; /* Fonte mais elegante */
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #000000; /* Fundo preto para o cabeçalho */
+    color: #ff9100; /* Título em amarelo */
+    padding: 30px 0; /* Aumentei o espaçamento no cabeçalho */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+header:hover {
+    background-color: #333; /* Alterar cor no hover */
+    padding: 30px 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul li {
+    margin: 0 30px; /* Aumentei a margem entre os itens de navegação */
+}
+
+header nav ul li a {
+    color: #ffeb3b; /* Cor amarela para os links */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #fff; /* Troca para branco no hover */
+    transform: scale(1.1);
+}
+
+/* Estilo da seção de introdução (frases) */
+.intro {
+    text-align: center;
+    padding: 80px 20px; /* Aumentei o padding para dar mais espaço */
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 12px; /* Bordas mais arredondadas */
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.8);
+}
+
+.titulo-principal,
+.subtitulo {
+    color: #ffeb3b; /* Cor amarela */
+    margin-bottom: 30px; /* Aumentei o espaçamento abaixo dos títulos */
+    font-size: 34px; /* Aumentei o tamanho da fonte */
+    font-weight: 700;
+    text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
+}
+
+.subtitulo {
+    font-size: 24px;
+}
+
+/* Ajustando o estilo para as frases específicas em amarelo */
+.frase-principal, .frase-secundaria {
+    color: #ffeb3b; /* Cor amarela para as frases */
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.frase-principal {
+    font-size: 30px;
+}
+
+.frase-secundaria {
+    font-size: 22px;
+}
+
+/* Título principal */
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #ff9900;
+    text-align: center;
+    margin-bottom: 30px; /* Aumentei o espaçamento abaixo dos títulos */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo da seção de produtos */
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Aumentei o tamanho mínimo das colunas */
+    gap: 30px; /* Aumentei o espaçamento entre os produtos */
+    padding: 50px 20px; /* Aumentei o padding */
+    background: #111;
+}
+
+/* Título "Nosso Sabores" centralizado acima das pizzas */
+.produtos-titulo {
+    font-size: 42px; /* Aumentei o tamanho da fonte */
+    color: #ffeb3b;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px; /* Aumentei o espaçamento abaixo do título */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo da pizza */
+.pizza {
+    background-color: #333;
+    border-radius: 12px; /* Bordas mais arredondadas */
+    text-align: center;
+    padding: 30px; /* Aumentei o padding */
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.pizza:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.pizza img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 25px; /* Aumentei a margem entre a imagem e o título */
+}
+
+.pizza h3 {
+    font-size: 24px;
+    color: #ffeb3b;
+    margin-bottom: 20px; /* Aumentei a margem abaixo do título */
+    text-transform: capitalize;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.pizza p {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 30px; /* Aumentei a margem abaixo da descrição */
+}
+
+.pizza button {
+    background-color: #ffeb3b;
+    color: #000;
+    font-size: 16px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px; /* Bordas mais arredondadas */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+}
+
+.pizza button:hover {
+    background-color: #f44336;
+    transform: scale(1.05);
+}
+
+/* Estilo para a seção de contato */
+.contato {
+    background-color: #333;
+    color: white;
+    padding: 80px 20px; /* Aumentei o padding para dar mais espaço */
+    text-align: center;
+    margin-top: 60px; /* Aumentei a margem superior */
+}
+
+.contato h2 {
+    font-size: 38px;
+    margin-bottom: 30px; /* Aumentei o espaçamento abaixo do título */
+    color: #ffeb3b;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.contato p {
+    font-size: 18px;
+    margin-bottom: 35px; /* Aumentei o espaçamento abaixo do texto */
+}
+
+.contato form {
+    display: grid;
+    gap: 25px; /* Aumentei o espaçamento entre os campos */
+    justify-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contato input,
+.contato textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #ffeb3b;
+    border-radius: 10px; /* Bordas mais arredondadas */
+    background-color: #444;
+    color: #ffeb3b;
+    transition: border 0.3s ease;
+}
+
+.contato input:focus,
+.contato textarea:focus {
+    border-color: #f44336;
+    outline: none;
+}
+
+.contato button {
+    background-color: #ffeb3b;
+    color: #000;
+    padding: 18px 30px;
+    border: none;
+    border-radius: 12px; /* Bordas mais arredondadas */
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+}
+
+.contato button:hover {
+    background-color: #f44336;
+    transform: scale(1.05);
+}
+
+/* Rodapé */
+footer {
+    background-color: #111;
+    color: white;
+    padding: 35px 0; /* Aumentei o padding para dar mais espaço */
+    text-align: center;
+    font-size: 14px;
+    margin-top: 60px; /* Aumentei a margem superior */
+}
+
+/* Responsividade para a exibição em dispositivos móveis */
+@media (max-width: 768px) {
+    .pizza {
+        padding: 20px;
+    }
+
+    .pizza h3 {
+        font-size: 20px;
+    }
+
+    .pizza p {
+        font-size: 16px;
+    }
+
+    .pizza button {
+        font-size: 14px;
+    }
+
+    .contato form {
+        padding: 10px;
+    }
+
+    .contato input,
+    .contato textarea {
+        font-size: 14px;
+    }
+
+    .contato button {
+        font-size: 16px;
+    }
+
+    .intro {
+        padding: 40px 20px;
+    }
+}
